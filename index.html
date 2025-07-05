@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Black Mirror</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="overlay" id="overlay"></div>
+
+
+    <dialog class="modal" id="modal" open>
+      <h2 class="neon-text">THE FUTURE IS BRIGHT</h2>
+      <p>To access this page, you need to accept.</p>
+      <div class="modal-button-group">
+        <button id="acceptBtn" class="btn modal-btn" onclick="acceptModal()">Accept</button>
+        <button id="refuseBtn" class="btn modal-btn" disabled data-tooltip="no free choice">Refuse</button>
+      </div>
+      
+    </dialog>
+
+    <main class="main-content" id="mainContent">
+
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
