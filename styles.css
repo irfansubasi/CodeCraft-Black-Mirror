@@ -1,15 +1,15 @@
 @font-face {
-    font-family: 'Proxima Nova';
-    src: url('./fonts/proximanova_regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'Proxima Nova';
+  src: url('./fonts/proximanova_regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Proxima Nova';
-    src: url('./fonts/proximanova_bold.otf') format('opentype');
-    font-weight: bold;
-    font-style: normal;
+  font-family: 'Proxima Nova';
+  src: url('./fonts/proximanova_bold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
 }
 
 * {
@@ -25,18 +25,42 @@ html {
 body {
   font-family: 'Proxima Nova', sans-serif;
   background-color: #000;
-  background-image: 
-    radial-gradient(circle at 25% 25%, rgba(72, 157, 191, 0.1) 2px, transparent 2px),
-    radial-gradient(circle at 75% 75%, rgba(72, 157, 191, 0.1) 2px, transparent 2px),
+  background-image: radial-gradient(
+      circle at 25% 25%,
+      rgba(72, 157, 191, 0.1) 2px,
+      transparent 2px
+    ),
+    radial-gradient(
+      circle at 75% 75%,
+      rgba(72, 157, 191, 0.1) 2px,
+      transparent 2px
+    ),
     linear-gradient(90deg, transparent 98%, rgba(72, 157, 191, 0.1) 98%),
     linear-gradient(0deg, transparent 98%, rgba(72, 157, 191, 0.1) 98%),
-    linear-gradient(45deg, transparent 49%, rgba(72, 157, 191, 0.05) 49%, rgba(72, 157, 191, 0.05) 51%, transparent 51%),
-    linear-gradient(-45deg, transparent 49%, rgba(72, 157, 191, 0.05) 49%, rgba(72, 157, 191, 0.05) 51%, transparent 51%);
-  background-size: 50px 50px, 50px 50px, 50px 50px, 50px 50px, 100px 100px, 100px 100px;
+    linear-gradient(
+      45deg,
+      transparent 49%,
+      rgba(72, 157, 191, 0.05) 49%,
+      rgba(72, 157, 191, 0.05) 51%,
+      transparent 51%
+    ),
+    linear-gradient(
+      -45deg,
+      transparent 49%,
+      rgba(72, 157, 191, 0.05) 49%,
+      rgba(72, 157, 191, 0.05) 51%,
+      transparent 51%
+    );
+  background-size: 50px 50px, 50px 50px, 50px 50px, 50px 50px, 100px 100px,
+    100px 100px;
   background-position: 0 0, 25px 25px, 0 0, 0 0, 0 0, 0 0;
   color: #fff;
   min-height: 100vh;
   position: relative;
+}
+
+body.modal-open {
+  background-image: none;
 }
 
 body::before {
@@ -46,9 +70,18 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background: 
-    linear-gradient(90deg, transparent 0%, rgba(72, 157, 191, 0.02) 50%, transparent 100%),
-    linear-gradient(0deg, transparent 0%, rgba(72, 157, 191, 0.02) 50%, transparent 100%);
+  background: linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(72, 157, 191, 0.02) 50%,
+      transparent 100%
+    ),
+    linear-gradient(
+      0deg,
+      transparent 0%,
+      rgba(72, 157, 191, 0.02) 50%,
+      transparent 100%
+    );
   background-size: 200px 200px, 200px 200px;
   pointer-events: none;
   z-index: -1;
@@ -56,10 +89,7 @@ body::before {
 
 .neon-text {
   color: #fff;
-  text-shadow: 0 0 1px #fff,
-  0 0 3px #fff,
-  0 0 8px #fff,
-  0 0 20px #fff;
+  text-shadow: 0 0 1px #fff, 0 0 3px #fff, 0 0 8px #fff, 0 0 20px #fff;
 }
 
 .breath-animation {
@@ -72,6 +102,10 @@ body::before {
   background-repeat: no-repeat;
   width: 100%;
   height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
 }
 
 .modal {
@@ -107,53 +141,50 @@ body::before {
 }
 
 .btn:hover {
-    background-color: #fff;
-    color: #000;
-    transition: all 0.7s ease;
-    position: relative;
+  background-color: #fff;
+  color: #000;
+  transition: all 0.7s ease;
+  position: relative;
 }
-
-
 
 .modal-button-group {
   display: flex;
   gap: 50px;
 }
 
-
 #refuseBtn {
-    cursor: not-allowed;
+  cursor: not-allowed;
 }
 
 #refuseBtn:hover {
-    background-color: #000;
-    color: #fff;
-    opacity: 0.5;
+  background-color: #000;
+  color: #fff;
+  opacity: 0.5;
 }
 
 #refuseBtn[data-tooltip]:hover::after {
-    content: attr(data-tooltip);
-    position: absolute;
-    bottom: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    background: rgba(0, 0, 0, 0.9);
-    color: #fff;
-    padding: 8px 12px;
-    border-radius: 5px;
-    font-size: 1rem;
-    white-space: nowrap;
-    z-index: 1000;
-    margin-bottom: 5px;
-    border: 1px solid #333;
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.9);
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 5px;
+  font-size: 1rem;
+  white-space: nowrap;
+  z-index: 1000;
+  margin-bottom: 5px;
+  border: 1px solid #333;
 }
 
 .main-header {
-  display: block; /*unutma*/
+  display: none; /*unutma*/
 }
 
 .main-content {
-  display: block; /*unutma*/
+  display: none; /*unutma*/
   min-height: 100vh;
 }
 
@@ -171,11 +202,13 @@ body::before {
   left: 0;
   width: 100%;
   z-index: 1000;
-  background: linear-gradient(to bottom,
-  rgba(0, 0, 0, 0.95) 0%,
-  rgba(0, 0, 0, 0.7) 30%,
-  rgba(0, 0, 0, 0.5) 50%,
-  rgba(0, 0, 0, 0) 100%);
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.95) 0%,
+    rgba(0, 0, 0, 0.7) 30%,
+    rgba(0, 0, 0, 0.5) 50%,
+    rgba(0, 0, 0, 0) 100%
+  );
   padding: 0 50px;
 }
 
@@ -202,22 +235,22 @@ body::before {
 }
 
 .nav-item a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.2rem;
-    font-weight: bold;
-    transition: color 0.3s ease;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: color 0.3s ease;
 }
 
 .nav-item a:hover {
-    color: #489dbf;
+  color: #489dbf;
 }
 
 .nav-logo img {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-    object-fit: contain;
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  object-fit: contain;
 }
 
 .hero-section {
@@ -395,7 +428,7 @@ body::before {
   position: relative;
   width: 100%;
   height: 100%;
-  transition: transform 0.6s cubic-bezier(0.4,0.2,0.2,1);
+  transition: transform 0.6s cubic-bezier(0.4, 0.2, 0.2, 1);
   transform-style: preserve-3d;
 }
 
@@ -411,13 +444,13 @@ body::before {
   height: 100%;
   backface-visibility: hidden;
   border-radius: 18px;
-  box-shadow: 0 0 24px rgba(72,157,191,0.15);
+  box-shadow: 0 0 24px rgba(72, 157, 191, 0.15);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: rgba(0,0,0,0.85);
-  border: 1.5px solid rgba(72,157,191,0.25);
+  background: rgba(0, 0, 0, 0.85);
+  border: 1.5px solid rgba(72, 157, 191, 0.25);
   padding: 24px 18px;
   gap: 18px;
 }
@@ -428,7 +461,7 @@ body::before {
   object-fit: cover;
   border-radius: 12px;
   margin-bottom: 12px;
-  border: 1px solid rgba(72,157,191,0.15);
+  border: 1px solid rgba(72, 157, 191, 0.15);
 }
 
 .character-card-front h3 {
@@ -443,8 +476,12 @@ body::before {
 
 .character-card-back {
   transform: rotateY(180deg);
-  background: linear-gradient(135deg, rgba(0,0,0,0.95), rgba(72,157,191,0.10));
-  box-shadow: 0 0 32px rgba(72,157,191,0.18);
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.95),
+    rgba(72, 157, 191, 0.1)
+  );
+  box-shadow: 0 0 32px rgba(72, 157, 191, 0.18);
 }
 
 .character-card-back h3 {
@@ -472,9 +509,8 @@ body::before {
   border: 1px solid #489dbf55;
 }
 
-
 .footer {
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -537,23 +573,28 @@ body::before {
 }
 
 @keyframes heartBeat {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.3); }
-  100% { transform: scale(1); }
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
-@keyframes breath{
-    0%{
-        opacity: 0.5;
-    }
-    50%{
-        opacity: 1;
-    }
-    100%{
-        opacity: 0.5;
-    }
+@keyframes breath {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
 }
-
 
 @media (max-width: 1536px) {
   .container {
@@ -568,7 +609,7 @@ body::before {
 
   .hero-content {
     grid-template-columns: 1fr;
-    gap: 20px; 
+    gap: 20px;
   }
 
   .hero-content img {
@@ -576,16 +617,11 @@ body::before {
     max-width: 300px;
   }
 
-
   .hero-content-text {
     align-items: center;
     justify-content: center;
     text-align: center;
   }
-
-
-
-
 }
 
 @media (max-width: 1024px) {
@@ -596,11 +632,11 @@ body::before {
   .navbar {
     padding: 0 20px;
   }
-  
+
   .hamburger {
     display: flex;
   }
-  
+
   .nav-menu {
     position: fixed;
     left: -100%;
@@ -614,15 +650,15 @@ body::before {
     height: 100vh;
     gap: 30px;
   }
-  
+
   .nav-menu.active {
     left: 0;
   }
-  
+
   .nav-item {
     margin: 0;
   }
-  
+
   .nav-item a {
     font-size: 1.5rem;
     padding: 15px 0;
@@ -633,15 +669,15 @@ body::before {
     margin: 0 auto;
     max-width: 150px;
   }
-  
+
   .hamburger.active .bar:nth-child(2) {
     opacity: 0;
   }
-  
+
   .hamburger.active .bar:nth-child(1) {
     transform: translateY(9px) rotate(45deg);
   }
-  
+
   .hamburger.active .bar:nth-child(3) {
     transform: translateY(-9px) rotate(-45deg);
   }
@@ -655,8 +691,6 @@ body::before {
   .hero-content-text {
     font-size: 1rem;
   }
-
-
 }
 
 @media (max-width: 640px) {
@@ -668,6 +702,4 @@ body::before {
   .nav-logo img {
     max-width: 200px;
   }
-  
 }
-
