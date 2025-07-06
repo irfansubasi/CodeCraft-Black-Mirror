@@ -128,8 +128,8 @@ favoriteBtn.addEventListener('click', () => {
   favoriteBtn.classList.toggle('active');
 
   if (favoriteBtn.classList.contains('active')) {
-    favoriteText.textContent = 'Favorilerden Çıkar';
+    favoriteText.textContent = 'Remove from favorites';
   } else {
-    favoriteText.textContent = 'Favorilere Ekle';
+    favoriteText.textContent = 'Add to favorites';
   }
 });
