@@ -24,88 +24,98 @@
       <nav class="navbar">
         <div class="nav-logo">
           <a href="#">
-            <img src="./assets/logo.png" alt="Black Mirror Logo" />
+            <img src="./assets/ui/logo.png" alt="Black Mirror Logo" />
           </a>
         </div>
+        
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        
         <ul class="nav-menu">
-          <li class="nav-item"><a href="#">About</a></li>
-          <li class="nav-item"><a href="#">Episodes</a></li>
-          <li class="nav-item"><a href="#">Characters</a></li>
-          <li class="nav-item"><a href="#">Contact</a></li>
+          <li class="nav-item"><a href="#about">About</a></li>
+          <li class="nav-item"><a href="#episodes">Episodes</a></li>
+          <li class="nav-item"><a href="#characters">Characters</a></li>
+          <li class="nav-item"><a href="#contact">Contact</a></li>
         </ul>
       </nav>
     </header>
 
     <main class="main-content" id="mainContent">
-      <section class="hero-section">
+      <section class="hero-section" id="about">
         <video
           class="hero-video"
-          src="./assets/preview.mp4"
+          src="./assets/ui/preview.mp4"
           autoplay
           muted
           loop
         ></video>
         <div class="hero-content container">
-          <img src="./assets/poster.jpg" alt="Black Mirror Poster">
+          <img src="./assets/ui/poster.jpg" alt="Black Mirror Poster">
           <div class="hero-content-text">
-            <img src="./assets/logo.png" alt="Black Mirror Logo" />
+            <img src="./assets/ui/logo.png" alt="Black Mirror Logo" />
             <p>
               Black Mirror is an anthology series that explores the dark and unsettling sides of modern society and advanced technology. Each episode presents a standalone story set in a near-future or alternate reality, focusing on themes such as artificial intelligence, virtual reality, social media, surveillance, and consciousness transfer. Through its dystopian, thought-provoking narratives, the series questions how technological progress can expose and amplify humanity's deepest flaws and fears.
             </p>
+            <button class="favorite-btn" id="favoriteBtn">
+              <span class="favorite-text">Favorilere Ekle</span>
+            </button>
           </div>
         </div>
       </section>
-      <section class="episodes-section">
+      <section class="episodes-section" id="episodes">
         <div class="episodes-content container">
           <h2 class="neon-text">MOST POPULAR EPISODES</h2>
           <div class="episodes-list">
             <div class="episode-card">
-              <img src="./assets/whitechristsmas.jpg" alt="white christmas">
+              <img src="./assets/episodes/whitechristsmas.jpg" alt="white christmas">
               <h3>White Christmas</h3>
               <p>Three interconnected tales of technology run amok during the Christmas season are told by two men at a remote outpost in a frozen wilderness.</p>
             </div>
             <div class="episode-card">
-              <img src="./assets/hangthedj.jpg" alt="Hang the DJ">
+              <img src="./assets/episodes/hangthedj.jpg" alt="Hang the DJ">
               <h3>Hang the DJ</h3>
               <p>Paired up by a dating program that puts an expiration date on all relationships, Frank and Amy soon begin to question the system's logic.</p>
             </div>
             <div class="episode-card">
-              <img src="./assets/blackmuseum.jpg" alt="Black Museum">
+              <img src="./assets/episodes/blackmuseum.jpg" alt="Black Museum">
               <h3>Black Museum</h3>
               <p>A woman enters the Black Museum, where the proprietor tells his stories relating to the artifacts.</p>
             </div>
             <div class="episode-card">
-              <img src="./assets/sanjunipero.jpg" alt="San Junipero">
+              <img src="./assets/episodes/sanjunipero.jpg" alt="San Junipero">
               <h3>San Junipero</h3>
               <p>When Yorkie and Kelly visit San Junipero, a fun-loving beach town full of surf, sun and sex, their lives are changed totally.</p>
             </div>
             <div class="episode-card">
-              <img src="./assets/history.jpg" alt="The Entire History of You">
+              <img src="./assets/episodes/history.jpg" alt="The Entire History of You">
               <h3>The Entire History of You</h3>
               <p>In the near future, everyone has access to a memory implant that records everything they do, see and hear. You need never forget a face again - but is that always a good thing?</p>
             </div>
             <div class="episode-card">
-              <img src="./assets/shutup.jpg" alt="Shut Up and Dance">
+              <img src="./assets/episodes/shutup.jpg" alt="Shut Up and Dance">
               <h3>Shut Up and Dance</h3>
               <p>When withdrawn Kenny stumbles headlong into an online trap, he is quickly forced into an uneasy alliance with shifty Hector, both at the mercy of persons unknown.</p>
             </div>
             <div class="episode-card">
-              <img src="./assets/hated.jpg" alt="Hated in the Nation">
+              <img src="./assets/episodes/hated.jpg" alt="Hated in the Nation">
               <h3>Hated in the Nation</h3>
               <p>In near-future London, police detective Karin Parke and her tech-savvy sidekick Blue investigate a string of mysterious deaths with a sinister link to social media.</p>
             </div>
             <div class="episode-card">
-              <img src="./assets/nosedive.jpg" alt="nosedive">
+              <img src="./assets/episodes/nosedive.jpg" alt="nosedive">
               <h3>Nosedive</h3>
               <p>A woman desperate to boost her social media score hits the jackpot when she's invited to a swanky wedding, but the trip doesn't go as planned.</p>
             </div>
             <div class="episode-card">
-              <img src="./assets/uss.jpg" alt="USS Callister">
+              <img src="./assets/episodes/uss.jpg" alt="USS Callister">
               <h3>USS Callister</h3>
               <p>Capt. Robert Daly presides over his crew with wisdom and courage. But a new recruit will soon discover nothing on this spaceship is what it seems.</p>
             </div>
             <div class="episode-card">
-              <img src="./assets/common.jpg" alt="Common People">
+              <img src="./assets/episodes/common.jpg" alt="Common People">
               <h3>Common People</h3>
               <p>When a medical emergency leaves schoolteacher Amanda fighting for her life, her desperate husband Mike signs her up for Rivermind, a high-tech system that will keep her alive.</p>
             </div>
@@ -122,7 +132,7 @@
           </div>
         </div>
       </section>
-      <section class="characters-section">
+      <section class="characters-section" id="characters">
         <div class="characters-content container">
           <h2 class="neon-text">SOME MEMORABLE CHARACTERS</h2>
           <p>Each episode has different stories and characters, but some have been unforgettable.</p>
@@ -131,7 +141,7 @@
             <div class="character-card">
               <div class="character-card-inner">
                 <div class="character-card-front">
-                  <img src="./assets/joe.jpg" alt="Joe">
+                  <img src="./assets/characters/joe.jpg" alt="Joe">
                   <h3>Joe Potter</h3>
                   <span class="character-episode-name">White Christmas</span>
                 </div>
@@ -145,7 +155,7 @@
             <div class="character-card">
               <div class="character-card-inner">
                 <div class="character-card-front">
-                  <img src="./assets/lacie.jpg" alt="Lacie">
+                  <img src="./assets/characters/lacie.jpg" alt="Lacie">
                   <h3>Lacie Pound</h3>
                   <span class="character-episode-name">Nosedive</span>
                 </div>
@@ -159,7 +169,7 @@
             <div class="character-card">
               <div class="character-card-inner">
                 <div class="character-card-front">
-                  <img src="./assets/liam.webp" alt="Liam">
+                  <img src="./assets/characters/liam.webp" alt="Liam">
                   <h3>Liam Foxwell</h3>
                   <span class="character-episode-name">The Entire History of You</span>
                 </div>
@@ -173,7 +183,7 @@
             <div class="character-card">
               <div class="character-card-inner">
                 <div class="character-card-front">
-                  <img src="./assets/kenny.jpg" alt="Kenny">
+                  <img src="./assets/characters/kenny.jpg" alt="Kenny">
                   <h3>Kenny</h3>
                   <span class="character-episode-name">Shut Up and Dance</span>
                 </div>
@@ -189,7 +199,7 @@
       </section>
     </main>
 
-    <footer class="footer">
+    <footer class="footer" id="contact">
       <div class="container">
         <p>© 2025 <a href="https://github.com/irfansubasi">İrfan Subaşı</a> - Black Mirror Fan Site for Insider Bootcamp</p>
         <div class="socials">
