@@ -7,10 +7,10 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="overlay" id="overlay"></div>
+    <!--<div class="overlay" id="overlay"></div>
 
 
-    <dialog class="modal" id="modal" open>
+    <dialog class="modal" id="modal" method="dialog" open>
       <h2 class="neon-text">THE FUTURE IS BRIGHT</h2>
       <p>To access this page, you need to accept.</p>
       <div class="modal-button-group">
@@ -18,10 +18,43 @@
         <button id="refuseBtn" class="btn modal-btn" disabled data-tooltip="no free choice">Refuse</button>
       </div>
       
-    </dialog>
+    </dialog>-->
+
+    <header class="main-header">
+      <nav class="navbar">
+        <div class="nav-logo">
+          <a href="#">
+            <img src="./assets/logo.png" alt="Black Mirror Logo" />
+          </a>
+        </div>
+        <ul class="nav-menu">
+          <li class="nav-item"><a href="#">About</a></li>
+          <li class="nav-item"><a href="#">Episodes</a></li>
+          <li class="nav-item"><a href="#">Characters</a></li>
+          <li class="nav-item"><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
 
     <main class="main-content" id="mainContent">
-
+      <section class="hero-section">
+        <video
+          class="hero-video"
+          src="./assets/preview.mp4"
+          autoplay
+          muted
+          loop
+        ></video>
+        <div class="hero-content container">
+          <img src="./assets/poster.jpg" alt="Black Mirror Poster">
+          <div class="hero-content-text">
+            <img src="./assets/logo.png" alt="Black Mirror Logo" />
+            <p>
+              Black Mirror is an anthology series that explores the dark and unsettling sides of modern society and advanced technology. Each episode presents a standalone story set in a near-future or alternate reality, focusing on themes such as artificial intelligence, virtual reality, social media, surveillance, and consciousness transfer. Through its dystopian, thought-provoking narratives, the series questions how technological progress can expose and amplify humanity’s deepest flaws and fears.
+            </p>
+          </div>
+        </div>
+      </section>
     </main>
 
     <script src="script.js"></script>
