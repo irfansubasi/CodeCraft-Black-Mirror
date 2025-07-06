@@ -3,6 +3,9 @@ const modal = document.querySelector('#modal');
 const mainContent = document.querySelector('#mainContent');
 const mainHeader = document.querySelector('.main-header');
 
+const hamburger = document.querySelector('.hamburger');
+const navMenu = document.querySelector('.nav-menu');
+
 let clickCount = 0;
 
 
@@ -93,3 +96,29 @@ const acceptModal = async () => {
 
     clickCount++;
 }
+
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('active');
+  navMenu.classList.toggle('active');
+});
+
+document.querySelectorAll('.nav-item a').forEach(link => {
+  link.addEventListener('click', () => {
+    hamburger.classList.remove('active');
+    navMenu.classList.remove('active');
+  });
+});
+
+
+const favoriteBtn = document.getElementById('favoriteBtn');
+const favoriteText = favoriteBtn.querySelector('.favorite-text');
+
+favoriteBtn.addEventListener('click', () => {
+  favoriteBtn.classList.toggle('active');
+  
+  if (favoriteBtn.classList.contains('active')) {
+    favoriteText.textContent = 'Favorilerden Çıkar';
+  } else {
+    favoriteText.textContent = 'Favorilere Ekle';
+  }
+});
